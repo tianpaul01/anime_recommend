@@ -13,7 +13,7 @@ from statistics import mean
 #  Collaborative filtering,  word Embedding dense vector representation - NeuralNetwork regression model
 
 
-dataset = pd.read_csv('./anime_recommend/data/rating.csv',nrows=200000)
+dataset = pd.read_csv('./anime_recommend/data/rating.csv',nrows=2000)
 dataset = dataset.sample(frac=1)  # shuffle data
 dataset = dataset.loc[dataset['rating'] != -1] # remove unwanted data (done after meta-data exploration)
 #dataset = dataset.loc[lambda x: x['rating'] >= 0]
